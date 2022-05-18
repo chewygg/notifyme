@@ -96,8 +96,12 @@ resource "aws_route_table" "route_table_vpc10" {
 }
 
 # SUBNET ASSOCIATION
-resource "aws_route_table_association" "sn_and_rt_association_vpc10" {
+resource "aws_route_table_association" "rt_association_sn_vpc10_pub_1a" {
   subnet_id      = aws_subnet.sn_vpc10_pub_1a.id
+  route_table_id = aws_route_table.route_table_vpc10.id
+}
+resource "aws_route_table_association" "rt_association_sn_vpc10_pub_1c" {
+  subnet_id      = aws_subnet.sn_vpc10_pub_1c.id
   route_table_id = aws_route_table.route_table_vpc10.id
 }
 
