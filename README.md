@@ -1,4 +1,4 @@
-Repositório criado para executação da atividade de provisionamento de uma infraestrutura AWS autoescalável e redundante com terraform, proposta no repositório do professor [kledsonhugo](https://github.com/kledsonhugo/iac/tree/master/checkpoint-02)
+Repositório criado para execução da atividade de provisionamento de uma infraestrutura AWS autoescalável e redundante com terraform, proposta no repositório do professor [kledsonhugo](https://github.com/kledsonhugo/iac/tree/master/checkpoint-02)
 
 Basta clonar o repositório, configurar o AWS CLI, e o terraform e seguir com:
 ```
