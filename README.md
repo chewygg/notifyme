@@ -4,6 +4,6 @@ Basta clonar o repositório, configurar o AWS CLI, e o terraform e seguir com:
 ```
 terraform init 
 terraform validate #para validar a sintaxe
-terraform plan #para verificar
+terraform plan #para verificar o que sera aplicado
 terraform apply #para subir o ambiente
 ```
