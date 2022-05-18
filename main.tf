@@ -208,17 +208,17 @@ resource "aws_lb" "lb_app_notify" {
 # APPLICATION LOAD BALANCER TARGET GROUP
 resource "aws_lb_target_group" "tg_app_notify" {
     name     = "tg-app-notify"
-    vpc_id   = "aws_vpc.vpc10.id"
+    vpc_id   = aws_vpc.vpc10.id
     protocol = "HTTP"
     port     = "80"
 
     tags = {
-        Name = "tg_app_notify"
+        Name = "tg-app-notify"
     }
 }
 
 # APPLICATION LOAD BALANCER LISTENER
-resource "aws_lb_listener" "listener_app_notify" {
+resource "aws_lb_listener" "lt_app_notify" {
     load_balancer_arn = aws_lb.lb_app_notify.arn
     protocol          = "HTTP"
     port              = "80"
@@ -288,7 +288,7 @@ resource "aws_db_instance" "rds_db_notifier" {
     skip_final_snapshot    = true
     db_subnet_group_name   = aws_db_subnet_group.rds_vpc10_sn_group.name
     parameter_group_name   = aws_db_parameter_group.rds_vpc10_pg.name
-    vpc_security_group_ids = [ aws_vpc.vpc10.id ]
+    vpc_security_group_ids = [ aws_security_group.sg_vpc10_priv.id ]
 
     tags = {
         Name = "rds-db-notifier"
